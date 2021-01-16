@@ -1,0 +1,24 @@
+﻿@model CurrencyConverter
+@{
+    decimal priceUAH = 1000;
+}
+<h1>Гланая страница</h1>
+<div>
+    @($"Курс американского доллара: {Model.USD}. Цена в американских долларах: {Decimal.Round(Model.convertToUSD(priceUAH),2)}")
+</div>
+
+<div>
+    @($"Курс евро: {Model.EUR}. Цена в евро: {Decimal.Round(Model.convertToEUR(priceUAH),2)}")
+</div>
+
+<div>
+    @($"Курс австралийского доллара: {Model.AUD}. Цена в австралийских долларах: {Decimal.Round(Model.convertToAUD(priceUAH),2)}")
+</div>
+
+<div>
+    @($"Курс китайского юаня: {Model.CNY}. Цена в китайских юанях: {Decimal.Round(Model.convertToCNY(priceUAH),2)}")
+</div>
+
+<div>
+    @($"Курс шведской кроны: {Model.SEK}. Цена в шведских кронах: {Decimal.Round(Model.convertToSEK(priceUAH),2)}")
+</div>
